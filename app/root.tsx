@@ -6,11 +6,22 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'react-router';
-
 import type { Route } from './+types/root';
+import { ThemeProvider, type Theme } from '~/shared/themes';
+
 import './index.css';
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function clientLoader() {
+  const theme = (localStorage.getItem('ui-theme') as Theme) || 'system';
+
+  return theme;
+}
+
+export function links() {
+  return [{ rel: 'icon', href: '#' }];
+}
+
+export function Layout({ children }: React.PropsWithChildren) {
   return (
     <html lang="es">
       <head>
@@ -28,8 +39,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
-  return <Outlet />;
+export default function App({ loaderData }: Route.ComponentProps) {
+  const theme = loaderData;
+
+  return (
+    <ThemeProvider defaultTheme={theme}>
+      <Outlet />
+    </ThemeProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
