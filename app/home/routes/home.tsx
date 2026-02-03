@@ -1,6 +1,6 @@
 import type { Route } from './+types/home';
 import { Button } from '~/shared/components/ui/button';
-import { useTheme } from '~/shared/themes';
+import { useTheme } from '~/core/themes';
 
 export function meta({}: Route.MetaArgs) {
   return [
