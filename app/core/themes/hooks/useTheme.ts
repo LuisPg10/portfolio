@@ -1,10 +1,18 @@
 import { use } from 'react';
-import { ThemeProviderContext } from '../context/ThemeContext';
+import { ThemeContext } from '../context/ThemeContext';
 
 export const useTheme = () => {
-  const context = use(ThemeProviderContext);
-
+  const context = use(ThemeContext);
   if (!context) throw new Error('useTheme must be used within a ThemeProvider');
 
-  return context;
+  const { theme, prefersDarkColorScheme, setTheme } = context;
+
+  return {
+    //* Props
+    theme,
+    isDark: theme === 'dark' || (theme === 'system' && prefersDarkColorScheme),
+
+    //* Methods
+    setTheme,
+  };
 };
