@@ -3,11 +3,13 @@ import type { Theme } from '../types/theme';
 
 type ThemeContextProps = {
   theme: Theme;
+  prefersDarkColorScheme: boolean;
   setTheme: (theme: Theme) => void;
 };
 
-export const ThemeProviderContext = createContext<ThemeContextProps>({
+export const ThemeContext = createContext<ThemeContextProps>({
   theme: 'system',
+  prefersDarkColorScheme: false,
   setTheme: () => null,
 });
 
@@ -23,32 +25,48 @@ export function ThemeProvider({
   storageKey = 'ui-theme',
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [prefersDarkColorScheme, setPrefersDarkColorScheme] = useState(false);
 
   useLayoutEffect(() => {
-    const root = window.document.documentElement;
+    const schemeColorQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    root.classList.remove('light', 'dark');
+    const applyTheme = () => {
+      const root = window.document.documentElement;
 
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light';
+      const systemIsDark = schemeColorQuery.matches;
+      setPrefersDarkColorScheme(systemIsDark);
 
-      root.classList.add(systemTheme);
-      return;
-    }
+      root.classList.remove('light', 'dark');
 
-    root.classList.add(theme);
+      if (theme !== 'system') {
+        root.classList.add(theme);
+        return;
+      }
+
+      root.classList.add(systemIsDark ? 'dark' : 'light');
+    };
+
+    applyTheme();
+
+    schemeColorQuery.addEventListener('change', applyTheme);
+
+    return () => {
+      schemeColorQuery.removeEventListener('change', applyTheme);
+    };
   }, [theme]);
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
-  };
-
-  return <ThemeProviderContext value={value}>{children}</ThemeProviderContext>;
+  return (
+    <ThemeContext
+      value={{
+        theme,
+        prefersDarkColorScheme,
+        setTheme: (theme: Theme) => {
+          localStorage.setItem(storageKey, theme);
+          setTheme(theme);
+        },
+      }}
+    >
+      {children}
+    </ThemeContext>
+  );
 }

@@ -10,6 +10,7 @@ import type { Route } from './+types/root';
 import { ThemeProvider, type Theme } from '~/core/themes';
 
 import './index.css';
+import { AppLayout } from './layouts/AppLayout';
 
 export function clientLoader() {
   const theme = (localStorage.getItem('ui-theme') as Theme) || 'system';
@@ -44,7 +45,9 @@ export default function App({ loaderData }: Route.ComponentProps) {
 
   return (
     <ThemeProvider defaultTheme={theme}>
-      <Outlet />
+      <AppLayout>
+        <Outlet />
+      </AppLayout>
     </ThemeProvider>
   );
 }
