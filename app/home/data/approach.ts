@@ -5,26 +5,26 @@ interface Approach {
 
 export const approach: Approach[] = [
   {
-    title: 'Arquitectura Primero',
+    title: 'Uso de arquitectura limpia',
     description:
-      'Cada proyecto comienza con un diseño de arquitectura adecuado. Arquitectura Hexagonal de la mano de Screaming Architecture y principios de Codigo Limpio aseguran mantenibilidad a largo plazo.',
+      'En cada proyecto que desarrollo trato de aplicar la arquitectura limpia en la medida de lo posible y en base a los requerimientos de los stakeholders.',
   },
 
   {
-    title: 'Disenar Antes de Codificar',
+    title: 'Diseñar antes de programar',
     description:
-      'Diagramas UML, diagramas de secuencia y documentación adecuada antes de escribir una sola línea de código.',
+      'Uso diagramas UML y herramientas enfocadas en la ingeniería de software para crear programas escalables y mantenibles.',
   },
 
   {
-    title: 'Excelencia en Control de Versiones',
+    title: 'Manejo de versiones',
     description:
-      'Metodología Gitflow  o Trunk Base Development estricta con commits significativos, estrategias de branching adecuadas y revisiones de codigo exhaustivas.',
+      'Me enfoco en hacer seguimiento de los cambios para asegurar la consistencia de los proyectos usando git de la mano de Github y Gitlab haciendo uso de metodologías como GitFlow o Trunk Based Development.',
   },
 
   {
-    title: 'Soluciones Escalables',
+    title: 'Soluciones escalables',
     description:
-      'Construyendo sistemas que crecen con tus necesidades. Diseño de base de datos, arquitectura de API y estrategias de despliegue adecuadas.',
+      'Construyo soluciones que puedan crecer con el tiempo según nuevas necesidades haciendo uso de principios SOLID, patrones de diseño y arquitecturas de software.',
   },
 ];

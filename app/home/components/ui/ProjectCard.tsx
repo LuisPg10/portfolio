@@ -11,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from '~/shared/components/ui/card';
-import { cn } from '~/shared/lib/utils';
 
 interface Props {
   project: Project;
@@ -33,29 +32,31 @@ export const ProjectCard = ({ project }: Props) => {
         <CardTitle className="text-lg">{title}</CardTitle>
         <CardDescription className="text-sm">{description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col">
+      <CardContent className="flex flex-1 flex-col">
         {/* project description */}
-        <div className="mb-4 flex-1 space-y-3">
-          <div>
-            <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
-              Problema
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              {problem}
-            </p>
+        {problem && solution && (
+          <div className="mb-4 flex-1 space-y-3">
+            <div>
+              <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
+                Problema
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {problem}
+              </p>
+            </div>
+            <div>
+              <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
+                Solución
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {solution}
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
-              Solución
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              {solution}
-            </p>
-          </div>
-        </div>
+        )}
 
         {/* used technologies */}
-        <div className="mb-4 flex flex-wrap gap-1.5">
+        <div className="mb-4 flex flex-1 flex-wrap items-end gap-1.5">
           {stack.map((tech) => (
             <Badge key={tech} variant="secondary" className="font-mono text-xs">
               {tech}
@@ -64,31 +65,33 @@ export const ProjectCard = ({ project }: Props) => {
         </div>
 
         {/* links (github and live demo) */}
-        <div className="border-border flex flex-wrap gap-3 border-t pt-4">
-          {repoUrl && (
-            <Link
-              to={repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-sm transition-colors"
-            >
-              <Github width="16" height="16" />
-              Repository
-            </Link>
-          )}
+        {(demoUrl || repoUrl) && (
+          <div className="border-border flex flex-wrap gap-3 border-t pt-4">
+            {repoUrl && (
+              <Link
+                to={repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-sm transition-colors"
+              >
+                <Github width="16" height="16" />
+                Repositorio
+              </Link>
+            )}
 
-          {demoUrl && (
-            <Link
-              to={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-sm transition-colors"
-            >
-              <ExternalLink className="size-4" />
-              Live Demo
-            </Link>
-          )}
-        </div>
+            {demoUrl && (
+              <Link
+                to={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-sm transition-colors"
+              >
+                <ExternalLink className="size-4" />
+                Live Demo
+              </Link>
+            )}
+          </div>
+        )}
       </CardContent>
     </Card>
   );

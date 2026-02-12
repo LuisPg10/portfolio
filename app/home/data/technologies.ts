@@ -1,4 +1,4 @@
-import type { Technology } from '../types/technology';
+import { TechName, type Technology } from '../types/technology';
 
 import javascriptIcon from '~/assets/icons/javascript.svg';
 import reactDarkIcon from '~/assets/icons/react-dark.svg';
@@ -22,19 +22,19 @@ import expressDarkIcon from '~/assets/icons/express-dark.svg';
 
 export const technologies: Technology[] = [
   {
-    name: 'Javascript',
+    name: TechName.JavaScript,
     site: 'https://developer.mozilla.org/docs/Web/JavaScript',
     icon: { resource: javascriptIcon, hasDarkResource: false },
   },
 
   {
-    name: 'TypeScript',
+    name: TechName.TypeScript,
     site: 'https://www.typescriptlang.org',
     icon: { resource: typescriptIcon, hasDarkResource: false },
   },
 
   {
-    name: 'React',
+    name: TechName.React,
     site: 'https://react.dev',
     icon: {
       resource: reactIcon,
@@ -44,19 +44,19 @@ export const technologies: Technology[] = [
   },
 
   {
-    name: 'Node.js',
+    name: TechName.Nodejs,
     site: 'https://nodejs.org',
     icon: { resource: nodejsIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Bun',
+    name: TechName.Bun,
     site: 'https://bun.sh',
     icon: { resource: bunIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Express.js',
+    name: TechName.Express,
     site: 'https://expressjs.com',
     icon: {
       resource: expressIcon,
@@ -66,55 +66,55 @@ export const technologies: Technology[] = [
   },
 
   {
-    name: 'Vite',
+    name: TechName.Vite,
     site: 'https://vite.dev',
     icon: { resource: viteIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Jest',
+    name: TechName.Jest,
     site: 'https://jestjs.io',
     icon: { resource: jestIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Vitest',
+    name: TechName.Vitest,
     site: 'https://vitest.dev',
     icon: { resource: vitestIcon, hasDarkResource: false },
   },
 
   {
-    name: 'React Router',
+    name: TechName.ReactRouter,
     site: 'https://reactrouter.com',
     icon: { resource: reactRouterIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Dart',
+    name: TechName.Dart,
     site: 'https://dart.dev',
     icon: { resource: dartIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Flutter',
+    name: TechName.Flutter,
     site: 'https://flutter.dev',
     icon: { resource: flutterIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Java',
+    name: TechName.Java,
     site: 'https://www.java.com',
     icon: { resource: javaIcon, hasDarkResource: false },
   },
 
   {
-    name: 'Linux',
+    name: TechName.Linux,
     site: 'https://www.linux.org',
     icon: { resource: linuxIcon, hasDarkResource: false },
   },
 
   {
-    name: 'AWS',
+    name: TechName.AWS,
     icon: {
       resource: awsIcon,
       hasDarkResource: true,
@@ -124,7 +124,7 @@ export const technologies: Technology[] = [
   },
 
   {
-    name: 'Firebase',
+    name: TechName.Firebase,
     icon: { resource: firebaseIcon, hasDarkResource: false },
     site: 'https://firebase.google.com',
   },

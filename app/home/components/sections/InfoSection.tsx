@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import { Stats } from '../ui/Stats';
 import { Badge } from '~/shared/components/ui/badge';
 import { Button } from '~/shared/components/ui/button';
-import { TechStrip } from '../ui/TechStrip';
 
 export const InfoSection = () => {
   return (

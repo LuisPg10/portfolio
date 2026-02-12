@@ -1,10 +1,23 @@
+import { useState } from 'react';
 import { projects } from '~/home/data/projects';
 import { ProjectCard } from '../ui/ProjectCard';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '~/shared/components/ui/tabs';
 
 export const ProjectsSection = () => {
+  const [tabValue, setTabValue] = useState('labor');
+
+  const handleTabChange = (value: string) => {
+    setTabValue(value);
+  };
+
   return (
     <section id="projects" className="mx-auto py-16 md:py-24">
-      <div className="mb-12">
+      <div className="mb-8">
         <p className="text-muted-foreground mb-2 font-mono text-sm">
           projects.showcase
         </p>
@@ -18,19 +31,40 @@ export const ProjectsSection = () => {
         </p>
       </div>
 
-      <div className="border-border mb-8 flex items-center gap-4 border-b pb-4">
-        <span className="text-muted-foreground text-sm">
-          Mostrando{' '}
-          <strong className="text-foreground">{projects.length}</strong>{' '}
-          proyectos
-        </span>
-      </div>
+      <Tabs defaultValue={tabValue} onValueChange={handleTabChange}>
+        <TabsList>
+          <TabsTrigger value="labor">Laborales</TabsTrigger>
+          <TabsTrigger value="personal">Personales</TabsTrigger>
+        </TabsList>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
-      </div>
+        <div className="border-border mt-8 mb-8 flex items-center gap-4 border-b pb-4">
+          <span className="text-muted-foreground text-sm">
+            Mostrando{' '}
+            <strong className="text-foreground">
+              {tabValue === 'labor'
+                ? projects.labor.length
+                : projects.personal.length}
+            </strong>{' '}
+            proyectos
+          </span>
+        </div>
+
+        <TabsContent value="labor">
+          <div className="grid gap-6 md:grid-cols-2">
+            {projects.labor.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </TabsContent>
+
+        <TabsContent value="personal">
+          <div className="grid gap-6 md:grid-cols-2">
+            {projects.personal.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </TabsContent>
+      </Tabs>
     </section>
   );
 };

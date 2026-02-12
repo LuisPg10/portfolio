@@ -1,74 +1,130 @@
-import type { Project } from '../types/project';
 import placeholder from '~/assets/placeholder.svg';
+import { TechName, Tool, type Project } from '../types';
 
-export const projects: Project[] = [
+// TODO: Add images to projects
+const laborProjects = [
   {
     image: placeholder,
-    title: 'Tic Tac Toe',
-    description: 'Motor de juego estrategico con implementacion de logica pura',
+    title: 'Art Gallery',
+    description:
+      'Plaforma para la administración de proyectos de arte, usuarios y eventos, además de semaforización para control de actividades.',
     problem:
-      'Las implementaciones tradicionales de juegos mezclan la interfaz con la logica del juego, dificultando las pruebas y la reutilizacion.',
+      'Tadeo Art Gallery presentaba problemas en la gestión de eventos y proyectos artísticos teniendo dificultades para gestionar cronogrmas y actividades.',
     solution:
-      'Desarrolle un motor de juego independiente del framework, enfocado en logica pura y gestion de estado, separando responsabilidades para maxima reutilizacion.',
-    stack: ['TypeScript', 'Jest', 'Clean Architecture'],
-    repoUrl: 'https://github.com',
-    demoUrl: 'https://example.com',
+      'Desarrollé una aplicación preliminar que permite solventar estos problemas de gestión minimizando la acción humana y gestionando procesos desde dicho sistema.',
+    stack: [
+      Tool.CleanArchitecture,
+      TechName.TypeScript,
+      TechName.React,
+      TechName.MUI,
+      TechName.Firebase,
+      TechName.Vite,
+      TechName.Vitest,
+    ],
+    repoUrl: 'https://github.com/LuisPg10/art-gallery-app/tree/main',
   },
   {
     image: placeholder,
-    title: 'Sistema de Gestion',
-    description: 'Aplicacion de gestion empresarial de nivel enterprise',
+    title: 'Ortodent',
+    description: 'Landing page para la clínica odontológica Ortodent',
     problem:
-      'Requisitos de negocio complejos con multiples roles de usuario y relaciones de datos intrincadas necesitaban una solucion mantenible.',
-    solution:
-      'Aplique principios SOLID y Clean Architecture para crear un sistema escalable con limites de dominio claros y componentes testeables.',
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Docker'],
-    repoUrl: 'https://github.com',
-    demoUrl: 'https://example.com',
+      'La clínica odontológica no tenía posicionamiento más allá de las redes sociales.',
+    solution: 'Desarrollé una landing page para mejorar su posicionamiento.',
+    stack: [
+      Tool.ScreamingArchitecture,
+      TechName.TypeScript,
+      TechName.React,
+      TechName.Tailwind,
+      TechName.ShadcnUI,
+      TechName.Vite,
+    ],
+    repoUrl: 'https://github.com/LuisPg10/ortodent',
+    demoUrl: 'https://ortodent.care',
   },
   {
     image: placeholder,
-    title: 'App Movil de Inventario',
-    description: 'Gestion de inventario multiplataforma para equipos de campo',
+    title: 'Luz Dent',
+    description: 'Landing page para la clínica odontológica Luz Dent',
     problem:
-      'Los trabajadores de campo necesitaban seguimiento de inventario offline con sincronizacion en tiempo real al conectarse.',
-    solution:
-      'Desarrolle una app React Native con arquitectura offline-first, usando SQLite para almacenamiento local y sincronizacion en segundo plano.',
-    stack: ['React Native', 'TypeScript', 'SQLite', 'Node.js', 'REST API'],
-    repoUrl: 'https://github.com',
+      'La clínica odontológica no tenía un posicionamiento claro en la web',
+    solution: 'Desarrollé una landing page para mejorar su posicionamiento.',
+    stack: [
+      Tool.ScreamingArchitecture,
+      TechName.TypeScript,
+      TechName.React,
+      TechName.Tailwind,
+      TechName.ShadcnUI,
+      TechName.Vite,
+    ],
+    repoUrl: 'https://github.com/LuisPg10/luzdent',
+    demoUrl: 'https://www.luzdentdg.com/',
   },
+
   {
     image: placeholder,
-    title: 'Servicio API Gateway',
-    description: 'Gestion centralizada de APIs y capa de autenticacion',
+    title: 'Diccionario kankuamo',
+    description:
+      'Diccionario para el aprendizaje de la lengua kankuama junto con el inglés y el español',
     problem:
-      'Multiples microservicios necesitaban autenticacion unificada, limitacion de peticiones y enrutamiento de solicitudes.',
+      'Las comunidades de del resguardo indígena Río Seco tenían dificultades para el aprendizaje del español e inglés usando herramientas didacticas, además las tradiciones culturales estaban sufriendo un declive debido a la globalización que estaba llegado a este sitio.',
     solution:
-      'Construi un API gateway en Node.js implementando arquitectura hexagonal con adaptadores para diferentes proveedores de autenticacion.',
-    stack: ['Node.js', 'Express', 'Redis', 'JWT', 'Docker'],
-    repoUrl: 'https://github.com',
-  },
-  {
-    image: placeholder,
-    title: 'Dashboard en Tiempo Real',
-    description: 'Panel de analiticas en vivo con actualizaciones WebSocket',
-    problem:
-      'Los stakeholders necesitaban visibilidad en tiempo real de metricas clave sin recargar la pagina.',
-    solution:
-      'Cree un dashboard responsivo con conexiones WebSocket para actualizaciones de datos en vivo y renderizado eficiente de graficos.',
-    stack: ['React', 'TypeScript', 'WebSocket', 'D3.js', 'Node.js'],
-    repoUrl: 'https://github.com',
-    demoUrl: 'https://example.com',
-  },
-  {
-    image: placeholder,
-    title: 'Herramienta CLI',
-    description: 'Interfaz de linea de comandos para scaffolding de proyectos',
-    problem:
-      'El equipo necesitaba configuracion consistente de proyectos con patrones de arquitectura predefinidos.',
-    solution:
-      'Construi una herramienta CLI que genera scaffolds de proyectos siguiendo arquitectura hexagonal con todas las configuraciones necesarias.',
-    stack: ['Node.js', 'TypeScript', 'Commander.js', 'Inquirer'],
-    repoUrl: 'https://github.com',
+      'Desarrollé una aplicación iteractiva para faciliar el aprendizaje de la lengua nativa de los estudiantes articulandola con el inglés y el español.',
+    stack: [
+      TechName.JavaScript,
+      TechName.React,
+      TechName.Dart,
+      TechName.Flutter,
+      TechName.MariaDB,
+    ],
   },
 ];
+
+const personalProjects = [
+  {
+    image: placeholder,
+    title: 'TesloShop',
+    description:
+      'Aplicación para la gestión de un ecommerce de ropa usando herramientas como TansTack Query para la cache de los datos y mejorar la experiencia del usuario.',
+    stack: [
+      TechName.TypeScript,
+      TechName.React,
+      TechName.Tailwind,
+      TechName.ShadcnUI,
+      TechName.TansTackQuery,
+      TechName.Vite,
+    ],
+    repoUrl: 'https://github.com/LuisPg10/teslo-shop-frontend',
+  },
+  {
+    image: placeholder,
+    title: 'TechBlog',
+    description:
+      'Aplicación para la gestión de publicaciones de un foro interno. Se usaron herramientas como EC2 para el despliegue en la nube, docker para la contenerización del backend y el frontend y otros servicios de AWS como S3 para el almacenamiento de archivos y DynamoDB junto a RDS para el almacenamiento de las publicaciones.',
+    stack: [
+      TechName.TypeScript,
+      TechName.React,
+      TechName.Vite,
+      TechName.AWS,
+      TechName.Docker,
+    ],
+    repoUrl: 'https://github.com',
+    demoUrl: 'https://example.com',
+  },
+  {
+    image: placeholder,
+    title: 'Cinemapedia',
+    description:
+      'Aplicación para conocer las películas de todas las épocas, sus diferentes actores y trailers para obtener más información de la misma.',
+    stack: [
+      Tool.CleanArchitecture,
+      TechName.Flutter,
+      TechName.IsarDB,
+      TechName.SQLite,
+    ],
+  },
+];
+
+export const projects = {
+  labor: laborProjects,
+  personal: personalProjects,
+};
