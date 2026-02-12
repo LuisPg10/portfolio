@@ -1,15 +1,4 @@
-import { Link } from 'react-router';
-import { ExternalLink } from 'lucide-react';
 import { projects } from '~/home/data/projects';
-import { Github } from '~/shared/components/icons/Github';
-import { Badge } from '~/shared/components/ui/badge';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '~/shared/components/ui/card';
 import { ProjectCard } from '../ui/ProjectCard';
 
 export const ProjectsSection = () => {

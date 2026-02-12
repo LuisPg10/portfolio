@@ -7,9 +7,11 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '~/shared/components/ui/card';
+import { cn } from '~/shared/lib/utils';
 
 interface Props {
   project: Project;
@@ -20,17 +22,23 @@ export const ProjectCard = ({ project }: Props) => {
     project;
 
   return (
-    <Card className="hover:border-foreground/20 flex h-full flex-col transition-colors">
+    <Card className="hover:border-foreground/20 pt-0 transition-colors">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="h-75 rounded-t-xl object-cover"
+      />
+
       <CardHeader>
         <CardTitle className="text-lg">{title}</CardTitle>
         <CardDescription className="text-sm">{description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col">
+      <CardContent className="flex flex-col">
         {/* project description */}
         <div className="mb-4 flex-1 space-y-3">
           <div>
             <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
-              Problem
+              Problema
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {problem}
@@ -38,7 +46,7 @@ export const ProjectCard = ({ project }: Props) => {
           </div>
           <div>
             <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
-              Solution
+              Solución
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {solution}
@@ -56,7 +64,7 @@ export const ProjectCard = ({ project }: Props) => {
         </div>
 
         {/* links (github and live demo) */}
-        <div className="border-border flex gap-3 border-t pt-4">
+        <div className="border-border flex flex-wrap gap-3 border-t pt-4">
           {repoUrl && (
             <Link
               to={repoUrl}

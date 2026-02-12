@@ -1,8 +1,10 @@
 import type { Project } from '../types/project';
+import placeholder from '~/assets/placeholder.svg';
 
 export const projects: Project[] = [
   {
-    title: 'Motor de Tic Tac Toe',
+    image: placeholder,
+    title: 'Tic Tac Toe',
     description: 'Motor de juego estrategico con implementacion de logica pura',
     problem:
       'Las implementaciones tradicionales de juegos mezclan la interfaz con la logica del juego, dificultando las pruebas y la reutilizacion.',
@@ -13,6 +15,7 @@ export const projects: Project[] = [
     demoUrl: 'https://example.com',
   },
   {
+    image: placeholder,
     title: 'Sistema de Gestion',
     description: 'Aplicacion de gestion empresarial de nivel enterprise',
     problem:
@@ -24,6 +27,7 @@ export const projects: Project[] = [
     demoUrl: 'https://example.com',
   },
   {
+    image: placeholder,
     title: 'App Movil de Inventario',
     description: 'Gestion de inventario multiplataforma para equipos de campo',
     problem:
@@ -34,6 +38,7 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com',
   },
   {
+    image: placeholder,
     title: 'Servicio API Gateway',
     description: 'Gestion centralizada de APIs y capa de autenticacion',
     problem:
@@ -44,6 +49,7 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com',
   },
   {
+    image: placeholder,
     title: 'Dashboard en Tiempo Real',
     description: 'Panel de analiticas en vivo con actualizaciones WebSocket',
     problem:
@@ -55,6 +61,7 @@ export const projects: Project[] = [
     demoUrl: 'https://example.com',
   },
   {
+    image: placeholder,
     title: 'Herramienta CLI',
     description: 'Interfaz de linea de comandos para scaffolding de proyectos',
     problem:
