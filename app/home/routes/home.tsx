@@ -19,13 +19,13 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <main>
-      <div className="px-10 md:px-24">
+      <div className="px-5 md:px-24">
         <InfoSection />
       </div>
 
       <TechStrip />
 
-      <div className="px-10 md:px-24">
+      <div className="px-5 md:px-24">
         <ApproachSection />
         <ProjectsSection />
       </div>

@@ -50,7 +50,7 @@ export const ProjectsSection = () => {
         </div>
 
         <TabsContent value="labor">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.labor.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
         </TabsContent>
 
         <TabsContent value="personal">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.personal.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}

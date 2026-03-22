@@ -14,7 +14,7 @@ export const AppLayout = ({ children }: React.PropsWithChildren) => {
                 {'</>'}
               </span>
             </div>
-            <span className="font-semibold tracking-tight">Luis Dev</span>
+            <p className="font-semibold tracking-tight">Luis Dev</p>
           </Link>
         }
         items={appMenu}

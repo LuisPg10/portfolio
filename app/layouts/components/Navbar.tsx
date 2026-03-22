@@ -13,7 +13,7 @@ export const Navbar = ({ title, items = [] }: Props) => {
 
   return (
     <header className="border-border bg-background/95 supports-backdrop-filter:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
-      <div className="mx-auto flex h-14 items-center justify-between px-10 md:px-24">
+      <div className="mx-auto flex h-14 items-center justify-between px-5 md:px-24">
         {title}
         <div className="flex gap-5">
           <nav className="flex items-center gap-1">

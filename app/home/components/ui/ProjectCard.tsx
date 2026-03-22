@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '~/shared/components/ui/card';
@@ -21,7 +20,10 @@ export const ProjectCard = ({ project }: Props) => {
     project;
 
   return (
-    <Card className="hover:border-foreground/20 pt-0 transition-colors">
+    <Card
+      className="hover:border-foreground/20 pt-0 transition-colors"
+      role="article"
+    >
       <img
         src={project.image}
         alt={project.title}
@@ -33,35 +35,41 @@ export const ProjectCard = ({ project }: Props) => {
         <CardDescription className="text-sm">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col">
-        {/* project description */}
-        {problem && solution && (
-          <div className="mb-4 flex-1 space-y-3">
-            <div>
-              <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
-                Problema
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {problem}
-              </p>
+        <div className="flex-1">
+          {/* project description */}
+          {problem && solution && (
+            <div className="mb-4 flex-1 space-y-3">
+              <div>
+                <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
+                  Problema
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {problem}
+                </p>
+              </div>
+              <div>
+                <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
+                  Solución
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {solution}
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-foreground mb-1 text-xs font-medium tracking-wider uppercase">
-                Solución
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {solution}
-              </p>
-            </div>
-          </div>
-        )}
+          )}
 
-        {/* used technologies */}
-        <div className="mb-4 flex flex-1 flex-wrap items-end gap-1.5">
-          {stack.map((tech) => (
-            <Badge key={tech} variant="secondary" className="font-mono text-xs">
-              {tech}
-            </Badge>
-          ))}
+          {/* used technologies */}
+          <div className="mb-4 flex flex-wrap items-end gap-1.5">
+            {stack.map((tech) => (
+              <Badge
+                key={tech}
+                variant="secondary"
+                className="font-mono text-xs"
+              >
+                {tech}
+              </Badge>
+            ))}
+          </div>
         </div>
 
         {/* links (github and live demo) */}

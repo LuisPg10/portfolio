@@ -1,15 +1,15 @@
-import placeholder from '~/assets/placeholder.svg';
+import projectImages from './project-images';
 import { TechName, Tool, type Project } from '../types';
 
 // TODO: Add images to projects
-const laborProjects = [
+const laborProjects: Project[] = [
   {
-    image: placeholder,
+    image: projectImages.artGallery,
     title: 'Art Gallery',
     description:
       'Plaforma para la administración de proyectos de arte, usuarios y eventos, además de semaforización para control de actividades.',
     problem:
-      'Tadeo Art Gallery presentaba problemas en la gestión de eventos y proyectos artísticos teniendo dificultades para gestionar cronogrmas y actividades.',
+      'Tadeo Art Gallery presentaba problemas en la gestión de eventos y proyectos artísticos teniendo dificultades para gestionar cronogramas y actividades.',
     solution:
       'Desarrollé una aplicación preliminar que permite solventar estos problemas de gestión minimizando la acción humana y gestionando procesos desde dicho sistema.',
     stack: [
@@ -24,7 +24,7 @@ const laborProjects = [
     repoUrl: 'https://github.com/LuisPg10/art-gallery-app/tree/main',
   },
   {
-    image: placeholder,
+    image: projectImages.ortodent,
     title: 'Ortodent',
     description: 'Landing page para la clínica odontológica Ortodent',
     problem:
@@ -42,7 +42,7 @@ const laborProjects = [
     demoUrl: 'https://ortodent.care',
   },
   {
-    image: placeholder,
+    image: projectImages.luzdent,
     title: 'Luz Dent',
     description: 'Landing page para la clínica odontológica Luz Dent',
     problem:
@@ -61,14 +61,14 @@ const laborProjects = [
   },
 
   {
-    image: placeholder,
+    image: projectImages.kankuamoDictionary,
     title: 'Diccionario kankuamo',
     description:
       'Diccionario para el aprendizaje de la lengua kankuama junto con el inglés y el español',
     problem:
       'Las comunidades de del resguardo indígena Río Seco tenían dificultades para el aprendizaje del español e inglés usando herramientas didacticas, además las tradiciones culturales estaban sufriendo un declive debido a la globalización que estaba llegado a este sitio.',
     solution:
-      'Desarrollé una aplicación iteractiva para faciliar el aprendizaje de la lengua nativa de los estudiantes articulandola con el inglés y el español.',
+      'Desarrollé una aplicación interactiva para faciliar el aprendizaje de la lengua nativa de los estudiantes articulandola con el inglés y el español.',
     stack: [
       TechName.JavaScript,
       TechName.React,
@@ -79,9 +79,9 @@ const laborProjects = [
   },
 ];
 
-const personalProjects = [
+const personalProjects: Project[] = [
   {
-    image: placeholder,
+    image: projectImages.tesloShop,
     title: 'TesloShop',
     description:
       'Aplicación para la gestión de un ecommerce de ropa usando herramientas como TansTack Query para la cache de los datos y mejorar la experiencia del usuario.',
@@ -96,7 +96,7 @@ const personalProjects = [
     repoUrl: 'https://github.com/LuisPg10/teslo-shop-frontend',
   },
   {
-    image: placeholder,
+    image: projectImages.techBlog,
     title: 'TechBlog',
     description:
       'Aplicación para la gestión de publicaciones de un foro interno. Se usaron herramientas como EC2 para el despliegue en la nube, docker para la contenerización del backend y el frontend y otros servicios de AWS como S3 para el almacenamiento de archivos y DynamoDB junto a RDS para el almacenamiento de las publicaciones.',
@@ -111,7 +111,7 @@ const personalProjects = [
     demoUrl: 'https://example.com',
   },
   {
-    image: placeholder,
+    image: projectImages.cinemapedia,
     title: 'Cinemapedia',
     description:
       'Aplicación para conocer las películas de todas las épocas, sus diferentes actores y trailers para obtener más información de la misma.',
