@@ -96,6 +96,18 @@ const personalProjects: Project[] = [
     repoUrl: 'https://github.com/LuisPg10/teslo-shop-frontend',
   },
   {
+    image: projectImages.cinemapedia,
+    title: 'Cinemapedia',
+    description:
+      'Aplicación para conocer las películas de todas las épocas, sus diferentes actores y trailers para obtener más información de la misma.',
+    stack: [
+      Tool.CleanArchitecture,
+      TechName.Flutter,
+      TechName.IsarDB,
+      TechName.SQLite,
+    ],
+  },
+  {
     image: projectImages.techBlog,
     title: 'TechBlog',
     description:
@@ -111,16 +123,18 @@ const personalProjects: Project[] = [
     demoUrl: 'https://example.com',
   },
   {
-    image: projectImages.cinemapedia,
-    title: 'Cinemapedia',
+    image: projectImages.yesNoApp,
+    title: 'Yes No App',
     description:
-      'Aplicación para conocer las películas de todas las épocas, sus diferentes actores y trailers para obtener más información de la misma.',
-    stack: [
-      Tool.CleanArchitecture,
-      TechName.Flutter,
-      TechName.IsarDB,
-      TechName.SQLite,
-    ],
+      'Chat de conversación para poner en prueba la UI con Flutter. Con consumo de apis y manejo de estados con provider.',
+    stack: [Tool.CleanArchitecture, TechName.Flutter],
+  },
+  {
+    image: projectImages.toktik,
+    title: 'TokTik',
+    description:
+      'Aplicación estilo TikTok para el aprendizaje de Flutter y los diferentes widgets que se pueden usar como Stack, Icon, Column, etc.',
+    stack: [Tool.CleanArchitecture, TechName.Flutter],
   },
 ];
 

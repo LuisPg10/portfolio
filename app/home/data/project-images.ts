@@ -5,6 +5,8 @@ import luzdent from '~/assets/images/projects/luzdent.png';
 import ortodent from '~/assets/images/projects/ortodent.png';
 import techBlog from '~/assets/images/projects/tech-blog.png';
 import tesloShop from '~/assets/images/projects/teslo-shop.png';
+import toktik from '~/assets/images/projects/toktik.png';
+import yesNoApp from '~/assets/images/projects/yes-no-app.png';
 
 export default {
   artGallery,
@@ -14,4 +16,6 @@ export default {
   ortodent,
   techBlog,
   tesloShop,
+  toktik,
+  yesNoApp,
 };
