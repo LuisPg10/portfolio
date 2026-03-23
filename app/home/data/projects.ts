@@ -21,7 +21,7 @@ const laborProjects: Project[] = [
       TechName.Vite,
       TechName.Vitest,
     ],
-    repoUrl: 'https://github.com/LuisPg10/art-gallery-app/tree/main',
+    repoUrl: 'https://github.com/LuisPg10/art-gallery-app',
   },
   {
     image: projectImages.ortodent,
@@ -76,6 +76,8 @@ const laborProjects: Project[] = [
       TechName.Flutter,
       TechName.MariaDB,
     ],
+    repoUrl: 'https://github.com/LuisPg10/kankuamo-dictionary',
+    demoUrl: 'https://kankuamo-dictionary.netlify.app',
   },
 ];
 
@@ -94,6 +96,7 @@ const personalProjects: Project[] = [
       TechName.Vite,
     ],
     repoUrl: 'https://github.com/LuisPg10/teslo-shop-frontend',
+    demoUrl: 'https://tesloshop-app.netlify.app',
   },
   {
     image: projectImages.cinemapedia,
@@ -119,8 +122,8 @@ const personalProjects: Project[] = [
       TechName.AWS,
       TechName.Docker,
     ],
-    repoUrl: 'https://github.com',
-    demoUrl: 'https://example.com',
+    repoUrl: 'https://gitlab.com/LuisPg10/tech-blog',
+    demoUrl: 'https://luis-tech-blog.netlify.app',
   },
   {
     image: projectImages.yesNoApp,
