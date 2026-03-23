@@ -25,9 +25,9 @@ export const ProjectsSection = () => {
           Proyectos
         </h2>
         <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed text-pretty">
-          Una colección de trabajo que muestra mi enfoque en arquitectura de
-          software, código limpio y resolución de problemas. Cada proyecto
-          demuestra desafíos técnicos específicos y sus soluciones.
+          Conoce mi trabajo enfocado en la arquitectura de software, código
+          limpio y resolución de problemas. Cada proyecto demuestra desafíos
+          técnicos específicos y sus soluciones.
         </p>
       </div>
 

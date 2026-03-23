@@ -21,7 +21,7 @@ export const enum TechName {
   MUI = 'MUI',
   Nodejs = 'Nodejs',
   React = 'React',
-  ReactRouter = 'ReactRouter',
+  ReactRouter = 'React Router',
   ShadcnUI = 'ShadcnUI',
   SQLite = 'SQLite',
   Tailwind = 'TailwindCSS',

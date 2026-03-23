@@ -26,7 +26,7 @@ const laborProjects: Project[] = [
   {
     image: projectImages.ortodent,
     title: 'Ortodent',
-    description: 'Landing page para la clínica odontológica Ortodent',
+    description: 'Landing page para la clínica odontológica Ortodent.',
     problem:
       'La clínica odontológica no tenía posicionamiento más allá de las redes sociales.',
     solution: 'Desarrollé una landing page para mejorar su posicionamiento.',
@@ -44,7 +44,7 @@ const laborProjects: Project[] = [
   {
     image: projectImages.luzdent,
     title: 'Luz Dent',
-    description: 'Landing page para la clínica odontológica Luz Dent',
+    description: 'Landing page para la clínica odontológica Luz Dent.',
     problem:
       'La clínica odontológica no tenía un posicionamiento claro en la web',
     solution: 'Desarrollé una landing page para mejorar su posicionamiento.',
@@ -64,7 +64,7 @@ const laborProjects: Project[] = [
     image: projectImages.kankuamoDictionary,
     title: 'Diccionario kankuamo',
     description:
-      'Diccionario para el aprendizaje de la lengua kankuama junto con el inglés y el español',
+      'Diccionario para el aprendizaje de la lengua kankuama junto con el inglés y el español.',
     problem:
       'Las comunidades de del resguardo indígena Río Seco tenían dificultades para el aprendizaje del español e inglés usando herramientas didacticas, además las tradiciones culturales estaban sufriendo un declive debido a la globalización que estaba llegado a este sitio.',
     solution:
