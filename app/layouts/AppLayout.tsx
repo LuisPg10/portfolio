@@ -5,7 +5,7 @@ import { Navbar } from './components/Navbar';
 
 export const AppLayout = ({ children }: React.PropsWithChildren) => {
   return (
-    <>
+    <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
       <Navbar
         title={
           <Link to="/" className="flex items-center gap-2">
@@ -22,6 +22,6 @@ export const AppLayout = ({ children }: React.PropsWithChildren) => {
 
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
