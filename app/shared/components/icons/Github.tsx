@@ -1,10 +1,14 @@
-export const Github = () => {
+import type { IconProps } from '~/shared/types/icon-props';
+
+interface Props extends IconProps {}
+
+export const Github = ({ width = 20, height = 20 }: Props) => {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width={width}
+        height={height}
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

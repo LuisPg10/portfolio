@@ -8,9 +8,10 @@ import {
 } from 'react-router';
 import type { Route } from './+types/root';
 import { ThemeProvider, type Theme } from '~/core/themes';
+import { AppLayout } from './layouts/AppLayout';
+import { TooltipProvider } from './shared/components/ui/tooltip';
 
 import './index.css';
-import { AppLayout } from './layouts/AppLayout';
 
 export function clientLoader() {
   const theme = (localStorage.getItem('ui-theme') as Theme) || 'system';
@@ -45,9 +46,11 @@ export default function App({ loaderData }: Route.ComponentProps) {
 
   return (
     <ThemeProvider defaultTheme={theme}>
-      <AppLayout>
-        <Outlet />
-      </AppLayout>
+      <TooltipProvider>
+        <AppLayout>
+          <Outlet />
+        </AppLayout>
+      </TooltipProvider>
     </ThemeProvider>
   );
 }

@@ -1,10 +1,14 @@
 import type { Route } from './+types/home';
-import { Button } from '~/shared/components/ui/button';
-import { useTheme } from '~/core/themes';
+import {
+  ApproachSection,
+  InfoSection,
+  ProjectsSection,
+} from '../components/sections';
+import { TechStrip } from '../components/ui/TechStrip';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Portafolio de Luis' },
+    { title: 'Portafolio' },
     {
       name: 'description',
       content: 'Portafolio para mostrar mi experencia y trabajo a otros',
@@ -14,8 +18,17 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col items-center justify-center gap-2">
-      <h1>Portafolio de Luis</h1>
+    <main>
+      <div className="px-5 md:px-24">
+        <InfoSection />
+      </div>
+
+      <TechStrip />
+
+      <div className="px-5 md:px-24">
+        <ApproachSection />
+        <ProjectsSection />
+      </div>
     </main>
   );
 }
